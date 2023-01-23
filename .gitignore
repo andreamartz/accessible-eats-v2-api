@@ -1,0 +1,8 @@
+env/
+*.pyc
+__pycache__
+secrets.sh
+.flaskenv
+.coverage
+.DS_Store
+notes*.md
