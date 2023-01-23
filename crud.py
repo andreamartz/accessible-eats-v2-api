@@ -51,6 +51,31 @@ def create_feedback(user_id, business_id, chair_parking, ramp, auto_door, commen
 
     return feedback
 
+# **************************
+# READ (GET) FUNCTIONS
+# **************************
+
+# ********* Users **********
+
+def count_users_by_username(username):
+    """Return the count of users with a given username."""
+
+    count_query = User.query.filter(User.username == username)
+    count = count_query.count()
+    return count
+
+
+def get_user_by_username(username):
+    """Return a user by username.
+    
+    Args: username, a string
+
+    Return the first user with the given username
+    """
+    
+    user_query = User.query.filter(User.username == username)
+    user = user_query.first()
+    return user
 
 
 if __name__ == "__main__":
